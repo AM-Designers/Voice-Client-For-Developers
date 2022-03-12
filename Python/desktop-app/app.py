@@ -33,11 +33,11 @@ user = get_current_user()
 working_directory = os.getcwd() 
  
 # Basic Configuration
-window = Toplevel()
-width = 800
-height = 600
+window = tk.Tk()
+width = 1366
+height = 768
 photo = PhotoImage(file = working_directory + '\\Python\\desktop-app\\assets\\mic.png')
-img_label = Label(image=photo)
+img_label = Label(image=photo, width=100, height=200)
 
 def test_command():
     speak("Testing")
@@ -172,10 +172,10 @@ class Application(Frame):
     def createWidgets(self):
         button= Button(window, image=photo, command=test_command, borderwidth=0)
         button.pack(pady=30)
+       
           
-root = Tk()
-root.title("Voice Assistant")
+window.title("Voice Assistant")
 window.geometry(f"{width}x{height}")
-app = Application(master=root)
+app = Application(master=window)
 app.mainloop()
  
