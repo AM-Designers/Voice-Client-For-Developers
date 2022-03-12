@@ -1,6 +1,5 @@
 # To Do List
 # # Create a mic button in the app 
-
 from tkinter import *
 import tkinter as tk
 import speech_recognition as sr
@@ -9,13 +8,8 @@ import datetime
 import wikipedia
 import webbrowser
 import os
-import random
 import smtplib
-import requests
-import json
-import time
 import sys
-import subprocess
 import pyautogui
 import pyjokes
 import pyperclip
@@ -173,7 +167,8 @@ class Application(Frame):
         self.createWidgets()
          
     def createWidgets(self):
-        button = Button(window, image=photo, command=test_command, borderwidth=0)
+        # button = Button(window, image=photo,  borderwidth=0, command=test_command)
+        button = Button(window, image=photo,  borderwidth=0, command=take_input)
         # center app
         button.place(relx=0.5, rely=0.5, anchor=CENTER)
        
@@ -183,4 +178,3 @@ window.geometry(f"{width}x{height}")
 
 app = Application(master=window)
 app.mainloop()
- 
