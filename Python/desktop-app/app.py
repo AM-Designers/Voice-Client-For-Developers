@@ -39,7 +39,7 @@ height = 600
 # add image in photo variable and change its size
 photo = PhotoImage(file = working_directory + '\\Python\\desktop-app\\assets\\mic.png')
 photo = photo.subsample(3, 3)
-img_label = Label(image=photo)
+img_label = Label(image=photo) 
 
 
 
