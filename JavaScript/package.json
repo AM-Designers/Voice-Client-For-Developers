@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "electron": "^17.1.2",
+    "expo": "^44.0.6",
+    "scss": "^0.2.4"
+  }
+}
