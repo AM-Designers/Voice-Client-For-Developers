@@ -1,5 +1,3 @@
-# To Do List
-# # Create a mic button in the app 
 from tkinter import *
 import tkinter as tk
 import speech_recognition as sr
@@ -14,6 +12,13 @@ import pyautogui
 import pyjokes
 import pyperclip
 
+##################
+## Basic Config ##
+##################
+
+# Application Name
+app_name = 'Voice Assistant'
+
 # name of voice app
 name = 'John'
 
@@ -26,7 +31,7 @@ user = get_current_user()
 # get current working directory
 working_directory = os.getcwd() 
  
-# Basic Configuration
+# Window Configuration
 window = tk.Tk()
 width = 400
 height = 600
@@ -35,6 +40,13 @@ height = 600
 photo = PhotoImage(file = working_directory + '\\Python\\desktop-app\\assets\\mic.png')
 photo = photo.subsample(3, 3)
 img_label = Label(image=photo)
+
+
+
+###############
+## Functions ##
+###############
+
 
 def test_command():
     speak("Testing")
@@ -158,6 +170,12 @@ def sendEmail(to, content):
     server.close()
 
 
+
+#################
+## Application ##
+#################
+
+
 class Application(Frame):
     # a button that has a mic icon on it
     def __init__(self, master=None):
@@ -173,7 +191,7 @@ class Application(Frame):
         button.place(relx=0.5, rely=0.5, anchor=CENTER)
        
           
-window.title("Voice Assistant")
+window.title(app_name)
 window.geometry(f"{width}x{height}")
 
 app = Application(master=window)
