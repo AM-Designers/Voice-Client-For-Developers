@@ -1,5 +1,6 @@
+<!-- A voice to text software that is for developers, yes, yes it is. -->
 # Voice To Text For Developers
- A voice to text software that is for developers, yes, yes it is.
+Voice Client is a multi-platform application that allows developers to write code as they speak. The main inspiration for this application is for developers who want to write code with vocal.
 
 ## Ideas
 - Whenever I say, ul element, it must make a complete `<ul></ul>` element, where cursor should be inside the element.
